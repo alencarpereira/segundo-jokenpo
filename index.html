@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Jogo JokenPô</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>JokenPô</h1>
+
+        <div class="button">
+            <button id="rock" onclick=" playHuman('rock')">&#x1F44A;</button>
+            <button id="paper" onclick=" playHuman('paper')">&#x1F590;</button>
+            <button id="scissors" onclick=" playHuman('scissors')">&#x1F596;</button>
+        </div>
+
+        <p class="result"></p>
+
+        <p class="your-score">Sua pontuação: <span id="human-score">0</span></p>
+        <p class="machine-score">Pontuação da Alexa: <span id="machine-score">0</span></p>
+
+
+        <img src="./assets/reset.png" id="resetScore" alt="reset">
+
+        <!-- Botão para tocar música -->
+        <button id="play-music">🎵</button>
+
+        <!-- Elemento de áudio -->
+        <audio id="audio" preload="metadata" loop>
+            <source src="./midia/musicainfantil.mp3" type="audio/mpeg">
+            <source src="./midia/musicainfantil.ogg" type="audio/ogg">
+            <source src="./midia/musicainfantil.wav" type="audio/wav">
+        </audio>
+
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>
