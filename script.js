@@ -62,8 +62,27 @@ const playTheGame = (human, machine) => {
     }
 }
 
-      // Função para iniciar a música quando o botão é pressionado
-      document.getElementById("play-music").addEventListener("click", function () {
-        var audio = document.getElementById("audio");
+// Função para iniciar a música quando o botão é pressionado
+const playButton = document.getElementById("play-music");
+const audio = document.getElementById("audio");
+
+let isPlaying = false;
+
+playButton.addEventListener("click", () => {
+    if (isPlaying) {
+        audio.pause();
+        playButton.textContent = "🎵"; // Ícone para tocar
+    } else {
         audio.play();
-    });
+        playButton.textContent = "🔇"; // Ícone para pausar
+    }
+
+    isPlaying = !isPlaying;
+});
+
+// Também é bom garantir que, se a música for pausada por outro motivo,
+// o estado visual seja atualizado:
+audio.addEventListener("ended", () => {
+    isPlaying = false;
+    playButton.textContent = "🎵";
+});
