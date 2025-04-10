@@ -30,9 +30,9 @@ const GAME_OPTIONS = {
 
 
 // variavel do humano
-const playHuman = (humanChoide) => {
+const playHuman = (humanChoice) => {
 
-    playTheGame(humanChoide, playMachine())
+    playTheGame(humanChoice, playMachine())
 }
 // função para a maquina ecolher os nomes
 const playMachine = () => {

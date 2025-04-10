@@ -5,7 +5,8 @@
 }
 
 body {
-    background: url("https://picsum.photos/1600/900?random");  
+    background: url("https://picsum.photos/1600/900?random");
+    /* para ajustar a tela toda */
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -29,58 +30,62 @@ body {
     gap: 40px;
 }
 
-    button {
-        padding: 10px;
-        font-size: 50px;
-        cursor: pointer;
-        border: none;
-        border-radius: 10px;
-        transition: opacity 0.5s ease-in-out; /* Aqui é para ele colocar a opacidade mais lento   */
+button {
+    padding: 10px;
+    font-size: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+    /* Aqui é para ele colocar a opacidade mais lento   */
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+#rock {
+    background-color: #eb21d0;
+}
+
+#paper {
+    background-color: #c0e617;
+}
+
+#scissors {
+    background-color: #97e8eb;
+}
+
+p {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.your-score span {
+    color: rgb(111, 123, 231);
+}
+
+.machine-score span {
+    color: #e60b0b;
+}
+
+#resetScore {
+    width: 20px;
+}
+
+#play-music {
+    background-color: #FFFFFF;
+    width: 100px;
+}
+
+@media screen and (max-width: 800px) {
+
+    .button {
+        margin: 30px 0;
+        display: flex;
+        gap: 20px;
     }
 
-    button:hover{
-        opacity: 0.7;
-    }
 
-    #rock {
-        background-color: #eb21d0;
-    }
-    #paper {
-        background-color: #c0e617;
-    }
-    #scissors {
-        background-color: #97e8eb;
-    }
-    
-    p {
-        font-weight: bold;
-        font-size: 25px;
-        margin-bottom: 10px;
-    }
-    
-    .your-score span {
-        color: rgb(111, 123, 231);
-    }
-
-    .machine-score span {
-        color: #e60b0b;
-    }
-    
-    #resetScore {
-        width: 20px;
-    }
-
-    #play-music {
-        background-color: #FFFFFF;
-    }
-
-    @media screen and (max-width: 800px) {
-
-            .button {
-                margin: 30px 0;
-                display: flex;
-                gap: 20px;
-            }
-        
-        
-    }
+}
